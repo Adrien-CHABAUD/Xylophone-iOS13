@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 
     @IBAction func keyPressed(_ sender: UIButton) {
         playSound(soundName: sender.currentTitle!)
+        sender.layer.opacity = 0.5
     }
     
     func playSound(soundName: String) {
