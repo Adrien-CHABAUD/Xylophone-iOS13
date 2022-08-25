@@ -18,8 +18,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func keyPressed(_ sender: UIButton) {
+        // Play the sound related to the clicked button
         playSound(soundName: sender.currentTitle!)
+        
+        // Lower the opacity of the clicked button
         sender.layer.opacity = 0.5
+        
+        // Retard the next line of 2 sec.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
+            // Put back the opacity of the clicked button to normal
+            sender.layer.opacity = 1
+            
+        }
     }
     
     func playSound(soundName: String) {
