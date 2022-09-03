@@ -1,17 +1,38 @@
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
+<!--
+  Title: Xylophone
+  Description: iOS App of a xylophone, made using SWIFT
+  Author: Adrien CHABAUD
+ -->
+ 
+ <img src="/images/Adrien_banner_01.png">
+ 
+ 
+ # Xylophone ![iOS Badge](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white) ![Swift Badge](https://img.shields.io/badge/Swift%20Version-5-orange) 
 
-# Xylophone
+This app has been made as part of the **iOS & Swift - The Complete iOS App Development Bootcamp** on Udemy from **The App Brewery**
 
-## Our Goal
+## Table of contents
+* [Goal behind](#goal-behind)
+* [General Info](#general-info)
+* [Learning](#learning-tool)
+* [Technologies](#technologies)
 
-The goal of this tutorial is to dive into a simple iOS recipe - how to play sound and use an Apple library called AVFoundation. The most important skill of a great programmer is being able to solve your own problems. We’ll do that by exploring StackOverflow, Apple Documentation and learning how to search for solutions effectively. By learning to use these tools, you’ll be able to start adding custom features to an app and get it to do what you want it to.
+## Goal Behind
+
+The goal here was to learn how to play a sound and use Apple library called AVFoundation.
+
+## General Info
+
+This app is about making a musical instrument! You can touch a button and a sound is going to play and the button fade until the sound stops.
+
+<p align="center">
+  <img src="/images/xylophone.gif" width=300 hspace=20>
+</p>
 
 
-## What you will create
+## Learning Tool
 
-You will be making your first musical instrument! Music apps are so popular on the App Store that they even get their own category. So in this module, we’re going to make a colourful XyloPhone app. Get it? Ok, the jokes are bad, but remember, I only wrote the good ones... 
-
-## What you will learn
+As a learning tool, the conception of this app allowed me to do/learn the following:
 
 * How to play sound using AVFoundation and AVAudioPlayer.
 * Understand Apple documentation and how to use StackOverflow.
@@ -24,36 +45,12 @@ You will be making your first musical instrument! Music apps are so popular on t
 * Code refactoring.
 * Basic debugging.
 
-## Replacement Code
+## Technologies
 
-```
-import UIKit
-import AVFoundation
+This project uses:
+* *Xcode: 13.4.1*
+* *Swift: 5.6.1*
 
-class ViewController: UIViewController {
-    
-    var player: AVAudioPlayer!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    @IBAction func keyPressed(_ sender: UIButton) {
-        playSound()
-    }
-    
-    func playSound() {
-        let url = Bundle.main.url(forResource: "C", withExtension: "wav")
-        player = try! AVAudioPlayer(contentsOf: url!)
-        player.play()
-                
-    }
-}
-```
-
-
-
->This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
-
-![End Banner](Documentation/readme-end-banner.png)
-
+<p align="center">
+  <img src="Documentation/readme-end-banner.png">
+</p>
